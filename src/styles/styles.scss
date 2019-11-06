@@ -1,0 +1,9 @@
+$primary-color: black;
+$secondary-color: #727272;
+$font-size: 14px;
+
+* {
+    background: $primary-color;
+    color: $secondary-color;
+    font-size: $font-size;
+}
