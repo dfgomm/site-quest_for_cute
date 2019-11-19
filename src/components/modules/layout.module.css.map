@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "AAAA;;;;;;;;;EASE",
+    "mappings": "ACIA,AAAA,CAAC,CAAC;EACE,MAAM,EAAE,eAAe;EACvB,SAAS,EAJD,IAAI;CAKf;;ADLD,AAAA,UAAU,CAAC;EACT,MAAM,EAAE,WAAW;EACnB,SAAS,EAAE,KAAK;CACjB;;AAED,AAAA,QAAQ,CAAC;EACT,SAAS,EAAE,KAAK;CACf;;AAED,AAAA,MAAM,CAAC;EACH,UAAU,ECZE,OAAO;EDanB,KAAK,EAAE,GAAG;CACb",
     "sources": [
-        "layout.module.scss"
+        "layout.module.scss",
+        "../../styles/_config.scss"
     ],
     "names": [],
     "file": "layout.module.css"

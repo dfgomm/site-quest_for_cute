@@ -1,3 +1,26 @@
-/* .header {
+@import "../../styles/config";
 
-} */
+.header {
+    background: white;
+}
+
+.headerNav_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.headerNav_logo {
+    align-self: center;
+}
+
+.headerNav_links {
+  list-style: none;
+  display: flex;
+}
+
+.headerNav_links li {
+    padding-right: 2rem;
+}

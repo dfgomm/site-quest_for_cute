@@ -1,4 +1,42 @@
-/* .header {
+* {
+  border: 1px solid black;
+  font-size: 14px;
+}
 
-} */
+.header {
+  background: white;
+}
+
+.headerNav_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.headerNav_logo {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.headerNav_links {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.headerNav_links li {
+  padding-right: 2rem;
+}
 /*# sourceMappingURL=header.module.css.map */
