@@ -1,6 +1,7 @@
 * {
-  border: 1px solid black;
-  font-size: 14px;
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
 }
 
 .footer {
@@ -20,7 +21,8 @@
       justify-content: space-around;
 }
 
-.footer_social div {
+.footer_social i {
   display: inline;
+  margin-right: 0.5rem;
 }
 /*# sourceMappingURL=footer.module.css.map */

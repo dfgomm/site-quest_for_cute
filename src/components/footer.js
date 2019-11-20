@@ -8,9 +8,9 @@ const Footer = () => {
             <div className={footerStyles.footer_container}>
                 <div className={footerStyles.footer_social}>
                     <h3>Stay Connected</h3>
-                    <div>Instagram</div>
-                    <div>Facebook</div>
-                    <div>Pinterest</div>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-pinterest"></i>
                 </div>
                 <div className={footerStyles.footer_copyright}>
                     <p>&copy; 2020 Quest For Cute </p>

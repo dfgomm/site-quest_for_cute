@@ -1,12 +1,14 @@
 import React from "react"
 import Layout from '../components/layout'
-//import IndexStyles from '../components/modules/index.module.css'
+import indexStyles from '../components/modules/index.module.css'
 
 
 const IndexPage = () => {
     return (
         <Layout>
-            <p>This is the index page.</p>
+            <div className={indexStyles.indexCarousel_container}></div>
+            <h1 className={indexStyles.indexHeader}>Latest Posts</h1>
+            <h1 className={indexStyles.indexHeader}>Featured Items</h1>
         </Layout>
     )
 }

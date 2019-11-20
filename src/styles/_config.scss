@@ -1,8 +1,12 @@
 $primary-color: #28AFB0;
 $secondary-color: #CD5334;
-$font-size: 14px;
+
+$font-size: 12px;
+$header-font-size: 1.5rem;
 
 * {
-    border: 1px solid black;
+    //border: 1px solid black;
     font-size: $font-size;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
 }

@@ -1,0 +1,14 @@
+@import "../../styles/config";
+
+.indexCarousel_container {
+    background: black;
+    width: 100%;
+    height: 80vh; //switch to 100 percent
+    margin: 0 auto;
+}
+
+.indexHeader {
+    display: block;
+    font-size: $header-font-size;
+    text-align: center;
+}

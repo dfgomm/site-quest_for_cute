@@ -1,6 +1,7 @@
 * {
-  border: 1px solid black;
-  font-size: 14px;
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
 }
 
 .header {
@@ -27,6 +28,7 @@
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  font-size: 1.5rem;
 }
 
 .headerNav_links {
@@ -37,6 +39,8 @@
 }
 
 .headerNav_links li {
-  padding-right: 2rem;
+  padding-right: 1rem;
+  margin-right: 0rem;
+  font-size: 1.5rem;
 }
 /*# sourceMappingURL=header.module.css.map */
