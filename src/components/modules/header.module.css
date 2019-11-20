@@ -39,8 +39,14 @@
 }
 
 .headerNav_links li {
-  padding-right: 1rem;
+  padding-right: 5rem;
   margin-right: 0rem;
   font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: black;
 }
 /*# sourceMappingURL=header.module.css.map */

@@ -23,7 +23,13 @@
 }
 
 .headerNav_links li {
-    padding-right: 1rem;
+    padding-right: 5rem;
     margin-right: 0rem;
     font-size: $header-font-size;
+}
+
+a {
+  text-decoration: none;
+  font-size: $header-font-size;
+  color: black;
 }
