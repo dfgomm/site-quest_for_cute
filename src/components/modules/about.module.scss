@@ -1,0 +1,22 @@
+@import "../../styles/config";
+
+.about_container {
+  padding: 2rem 15rem;
+
+  h1 {
+    font-size: 24px;
+    font-weight: 1000;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  img {
+      border: solid 5px white;
+      border-radius: 5%;
+    float: right;
+    margin: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}

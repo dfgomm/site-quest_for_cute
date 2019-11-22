@@ -25,10 +25,8 @@
 }
 
 .headerNav_logo {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  font-size: 1.5rem;
+  width: 12rem;
+  margin-left: 5rem;
 }
 
 .headerNav_links {
@@ -36,11 +34,14 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 60%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .headerNav_links li {
   padding-right: 5rem;
-  margin-right: 0rem;
   font-size: 1.5rem;
 }
 

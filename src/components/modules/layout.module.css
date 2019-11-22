@@ -14,7 +14,8 @@
 }
 
 .pages {
-  background: #28AFB0;
+  background: -webkit-gradient(linear, left top, right top, from(#89f7fe), to(#66a6ff));
+  background: linear-gradient(90deg, #89f7fe 0%, #66a6ff 100%);
   width: 100%;
   padding-bottom: 1rem;
 }

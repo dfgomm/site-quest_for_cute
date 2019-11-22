@@ -7,8 +7,9 @@
 
 .footer_container {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-around;
+    padding-bottom: 2rem;
 }
 
 .footer_social {
@@ -17,7 +18,8 @@
 
 .footer_social i {  //swap with icons
     display: inline;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
+    font-size: 2rem;
 }
 
 .footer_copyright {

@@ -3,11 +3,14 @@ import { Link } from 'gatsby'
 
 import headerStyles from './modules/header.module.css'
 
+import logo from '../img/logo.png'
+
+
 const Header = () => {
     return (
         <header className={headerStyles.header}>
             <div className={headerStyles.headerNav_container}>
-                <div className={headerStyles.headerNav_logo}><Link to="">Logo</Link></div>
+                <Link to="/"><img src={logo} alt="Logo" className={headerStyles.headerNav_logo} /></Link>
                 <div>
                     <ol className={headerStyles.headerNav_links}>
                         <li><Link to="/shop">Shop</Link></li>
