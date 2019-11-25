@@ -32,7 +32,7 @@ const BlogPage = () => {
                         <h2><Link to={`/blog/${edge.node.slug}`} className={blogStyles.title} dangerouslySetInnerHTML={{ __html: edge.node.title }}></Link></h2>
                         <p className={blogStyles.date}>{edge.node.date}</p>
                         <p className={blogStyles.excerpt} dangerouslySetInnerHTML={{ __html: edge.node.excerpt }} />
-                        <h2><Link to={`/blog/${edge.node.slug}`} className={blogStyles.title}>Read more</Link></h2>
+                        <p><Link to={`/blog/${edge.node.slug}`} className={blogStyles.title}>Read more</Link></p>
                     </li>
                 )
             })}
