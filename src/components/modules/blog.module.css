@@ -1,1 +1,10 @@
-/* No CSS *//*# sourceMappingURL=blog.module.css.map */
+* {
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+.excerpt a {
+  display: none;
+}
+/*# sourceMappingURL=blog.module.css.map */

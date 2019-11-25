@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "ACMA,AAAA,CAAC,CAAC;EACE,SAAS,EAJD,IAAI;EAKZ,WAAW,EAAE,uBAAuB;EACpC,WAAW,EAAE,GAAG;CACnB;;ADRD,AAAA,QAAQ,CAAC,CAAC,CAAC;EACP,OAAO,EAAE,IAAI;CAChB",
     "sources": [
-        "blog.module.scss"
+        "blog.module.scss",
+        "../../styles/_config.scss"
     ],
     "names": [],
     "file": "blog.module.css"

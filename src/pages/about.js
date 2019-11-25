@@ -8,7 +8,7 @@ const AboutPage = () => {
     return (
         <Layout>
             <div className={aboutStyles.about_container}>
-            <img src={img}></img>
+            <img src={img} alt="Deidre and her husband."></img>
             <h1>Remember when you believed there was magic in everything, and anything was possible?</h1>
             <p>Create a lifestyle where you balance work and play, emphasis on the play!
             
