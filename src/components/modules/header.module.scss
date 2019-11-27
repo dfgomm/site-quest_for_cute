@@ -28,10 +28,14 @@
 .headerNav_links li {
     padding-right: 5rem;
     font-size: $header-font-size;
+
+    a {
+      text-decoration: none;
+      font-size: $header-font-size;
+      color: black;
+    }
 }
 
 a {
-  text-decoration: none;
-  font-size: $header-font-size;
-  color: black;
+  
 }

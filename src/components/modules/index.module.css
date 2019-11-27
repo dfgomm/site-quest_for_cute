@@ -52,11 +52,15 @@
 
 .post_title {
   font-weight: 1000;
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
 }
 
 .post_link {
   font-size: 12px;
   text-decoration: underline;
   padding-left: 70%;
+  color: black;
 }
 /*# sourceMappingURL=index.module.css.map */

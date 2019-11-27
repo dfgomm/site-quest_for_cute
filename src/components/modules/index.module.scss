@@ -40,10 +40,14 @@
 
 .post_title {
     font-weight: 1000;
+    text-decoration: none;
+    color: black;
+    font-size: $header-font-size;
 }
 
 .post_link {
     font-size: $font-size;
     text-decoration: underline;
     padding-left: 70%;
+    color: black;
 }

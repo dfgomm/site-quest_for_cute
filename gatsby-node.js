@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
-    const blogTemplate = path.resolve('./src/templates/blog.js')
+    const blogPostTemplate = path.resolve('./src/templates/blog-post.js')
     const res = await graphql(`
       query {
         allWordpressPost {
@@ -17,7 +17,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
     res.data.allWordpressPost.edges.forEach((edge) => {
         createPage({
-          component: blogTemplate,
+          component: blogPostTemplate,
           path: `/blog/${edge.node.slug}`,
           context: {
             slug: edge.node.slug,

@@ -17,21 +17,23 @@ export const query = graphql`
       }
     }
   }
-`    
+`
 
 
 
 
-      
+
 
 export default ({ data }) => {
   const post = data.allWordpressPost.edges[0].node
   return (
     <Layout>
-      <h1 className={blogStyles.title} dangerouslySetInnerHTML={{ __html: post.title}} />
-      <p>{post.date}</p>
-      <p><Link to="/blog">Go Back</Link></p>
-      <p className={blogStyles.body} dangerouslySetInnerHTML={{ __html: post.content}} />
+      <div className={blogStyles.blog_container}>
+        <h1 className={blogStyles.blog_title} dangerouslySetInnerHTML={{ __html: post.title }} />
+        <p className={blogStyles.blog_date}>{post.date}</p>
+        <p><Link to="/blog"  className={blogStyles.blog_link}>Go Back</Link></p>
+        <p className={blogStyles.blog_content} dangerouslySetInnerHTML={{ __html: post.content }} />
+      </div>
     </Layout>
   )
 }
