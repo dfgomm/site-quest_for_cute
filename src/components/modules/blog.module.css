@@ -68,7 +68,7 @@
 }
 
 .blog_title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-decoration: none;
   color: black;
   font-weight: 1000;
@@ -102,5 +102,10 @@
 
 .blog_link {
   color: black;
+}
+
+strong {
+  font-size: 14px;
+  font-weight: 1000;
 }
 /*# sourceMappingURL=blog.module.css.map */

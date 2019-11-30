@@ -57,7 +57,7 @@
 }
 
 .blog_title {
-  font-size: $header-font-size;
+  font-size: $header-font-size + .5rem;
   text-decoration: none;
   color: black;
   font-weight: 1000;
@@ -94,3 +94,7 @@
   color: black;
 }
 
+strong {
+  font-size: 14px;
+  font-weight: 1000;
+}
