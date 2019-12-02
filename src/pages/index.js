@@ -4,8 +4,10 @@ import Layout from '../components/layout'
 import indexStyles from '../components/modules/index.module.css'
 
 import Carousel from 'nuka-carousel'
-import test1 from '../img/logo.png'
-import test2 from '../img/office_backdrop.jpg'
+import header1 from '../img/header1.jpg'
+import header2 from '../img/header2.jpg'
+import header3 from '../img/header3.jpg'
+
 
 
 
@@ -34,13 +36,30 @@ const IndexPage = () => {
                     autoplayInterval={3000}
                     wrapAround={true}
                     renderCenterLeftControls={({ previousSlide }) => (
-                        <button onClick={previousSlide} className={indexStyles.indexCarousel_button}><i className={indexStyles.indexArrow__left}></i></button>
+                        <button onClick={previousSlide} className={indexStyles.indexCarousel_button}><i className="fas fa-arrow-left"></i></button>
                     )}
                     renderCenterRightControls={({ nextSlide }) => (
-                        <button onClick={nextSlide} className={indexStyles.indexCarousel_button}><i className={indexStyles.indexArrow__right}></i></button>
+                        <button onClick={nextSlide} className={indexStyles.indexCarousel_button}><i className="fas fa-arrow-right"></i></button>
                     )}>
-                    <img src={test1} alt="test"></img>
-                    <img src={test2} alt="test"></img>
+                    <div className={indexStyles.indexCarousel_slideContainer}>
+                        <Link to="/shop"><img src={header1} alt="Pencil case with cat, heart, and cupcake design."></img></Link>
+                        <div>
+                            <h2>Shop</h2>
+                        </div>
+                    </div>
+                    <div className={indexStyles.indexCarousel_slideContainer}>
+                        <Link to="/blog"><img src={header2} alt="Notepad next to a cup of coffee."></img></Link>
+                        <div>
+                            <h2>Blog</h2>
+                        </div>
+                    </div>
+                    <div className={indexStyles.indexCarousel_slideContainer}>
+                        <a href="https://etsy.us7.list-manage.com/subscribe?u=51a896ffcc9959f46b93e215a&id=d52a3c39d8" target="__blank"><img src={header3} alt="Colorful pencil cases."></img></a>
+                        <div>
+                            <h2>Cute Castle VIP</h2>
+                            <p>Save 20%!</p>
+                        </div>
+                    </div>
                 </Carousel>
             </div>
             <h1 className={indexStyles.indexHeader}>Latest Posts</h1>

@@ -10,7 +10,8 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Open Sans', 'sans-serif']
+          families: ['Open Sans', 'sans-serif', 'Pacifico', 'cursive']
+          //, families: ['Pacifico', 'cursive']
         }
       }
     },

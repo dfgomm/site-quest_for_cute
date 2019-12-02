@@ -19,6 +19,7 @@ export const query = graphql`
         node {
           title
           content
+          slug
           date(formatString: "MMMM DD, YYYY")
         }
       }
@@ -40,7 +41,6 @@ export default ({ data }) => {
           <div className={blogStyles.blogPost_container}>
             <h1 className={blogStyles.blog_title} dangerouslySetInnerHTML={{ __html: post.title }} />
             <p className={blogStyles.blog_date}>{post.date}</p>
-            <p><Link to="/blog" className={blogStyles.blog_link}>Go Back</Link></p>
             <p className={blogStyles.blog_content} dangerouslySetInnerHTML={{ __html: post.content }} />
           </div>
         </div>

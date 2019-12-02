@@ -5,42 +5,67 @@
 }
 
 .indexCarousel_container {
-  background: black;
+  background: white;
   width: 100%;
-  height: 80vh;
+  height: 87vh;
+  position: relative;
+  /* Media query this!
+    height: auto;
+
+    */
   margin: 0 auto;
 }
 
 .indexCarousel_button {
-  opacity: 50;
-  background-color: white;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  padding: 0rem 2rem;
 }
 
-.indexArrow_left {
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
+.indexCarousel_button i {
+  color: black;
+  font-size: 3rem;
 }
 
-.indexArrow_right {
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
+.indexCarousel_slideContainer img {
+  width: 100%;
+  position: relative;
+}
+
+.indexCarousel_slideContainer div {
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  color: white;
+  background-color: black;
+  padding: 3rem 5rem;
+  border-radius: 50%;
+}
+
+.indexCarousel_slideContainer div h2 {
+  font-size: 3rem;
+  text-align: right;
+  font-family: "Pacifico", cursive;
+}
+
+.indexCarousel_slideContainer div p {
+  color: white;
+  font-family: "Pacifico", cursive;
+  text-align: center;
+  font-size: 2rem;
 }
 
 .indexHeader {
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: center;
 }
 
-.indexPost_container, .indexItem_container {
+.indexPost_container,
+.indexItem_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,7 +79,8 @@
       flex-wrap: wrap;
 }
 
-.index_post, .index_item {
+.index_post,
+.index_item {
   background: white;
   height: 275px;
   width: 275px;
@@ -77,7 +103,7 @@
   font-weight: 1000;
   text-decoration: none;
   color: black;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .post_link {
