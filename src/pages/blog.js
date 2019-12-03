@@ -2,6 +2,8 @@ import React from "react"
 import Layout from '../components/layout'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 
+import BlogNav from '../components/blognav'
+
 import blogStyles from '../components/modules/blog.module.css'
 
 
@@ -22,7 +24,7 @@ const BlogPage = () => {
           title
           slug
           content
-          date(formatString:"MMMM DD, YYYY")
+          date(formatString: "MMMM DD, YYYY")
         }
       }
     }
@@ -48,50 +50,7 @@ const BlogPage = () => {
             })}
           </ol>
         </div>
-        <div className={blogStyles.blogNav_container}>
-          <h2>Recent Posts</h2>
-          <ol>
-            {data.allWordpressPost.edges.map((edge, i) => {
-              if (i < 5) {
-                return (
-                  <div className={blogStyles.blogNavList_container}>
-                    <li className={blogStyles.blogNav_list}>
-                      <h3><Link to={`/blog/${edge.node.slug}`} className={blogStyles.blogNav_link} dangerouslySetInnerHTML={{ __html: edge.node.title }}></Link></h3>
-                    </li>
-                  </div>
-                )
-              }
-            })}
-          </ol>
-          <h2>Archive</h2>
-          <ol>
-            {data.allWordpressPost.edges.map((edge, i) => {
-              if (i < 12) {
-                return (
-                  <div className={blogStyles.blogNavList_container}>
-                    <li className={blogStyles.blogNav_list}>
-                      <h3><Link to={`/blog/${edge.node.slug}`} className={blogStyles.blogNav_link} dangerouslySetInnerHTML={{ __html: edge.node.date }}></Link></h3>
-                    </li>
-                  </div>
-                )
-              }
-            })}
-          </ol>
-          <h2>Categories</h2>
-          <ol>
-            {data.allWordpressCategory.edges.map((edge, i) => {
-              if (i < 5) {
-                return (
-                  <div className={blogStyles.blogNavList_container}>
-                    <li className={blogStyles.blogNav_list}>
-                      <h3><Link to={`/blog/${edge.node.slug}`} className={blogStyles.blogNav_link} dangerouslySetInnerHTML={{ __html: edge.node.name }}></Link></h3>
-                    </li>
-                  </div>
-                )
-              }
-            })}
-          </ol>
-        </div>
+        <BlogNav />
       </div>
 
     </Layout>

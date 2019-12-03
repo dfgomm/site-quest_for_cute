@@ -1,7 +1,8 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
+import BlogNav from '../components/blognav'
 
 import blogStyles from '../components/modules/blog.module.css'
 
@@ -14,12 +15,12 @@ export const query = graphql`
         }
       }
     }
-    allWordpressPost(filter: { slug: { eq: $slug } }) {
+    allWordpressPost (filter: { slug: { eq: $slug } }) {
       edges {
         node {
           title
-          content
           slug
+          content
           date(formatString: "MMMM DD, YYYY")
         }
       }
@@ -44,50 +45,7 @@ export default ({ data }) => {
             <p className={blogStyles.blog_content} dangerouslySetInnerHTML={{ __html: post.content }} />
           </div>
         </div>
-        <div className={blogStyles.blogNav_container}>
-          <h2>Recent Posts</h2>
-          <ol>
-            {data.allWordpressPost.edges.map((edge, i) => {
-              if (i < 5) {
-                return (
-                  <div className={blogStyles.blogNavList_container}>
-                    <li className={blogStyles.blogNav_list}>
-                      <h3><Link to={`/blog/${edge.node.slug}`} className={blogStyles.blogNav_link} dangerouslySetInnerHTML={{ __html: edge.node.title }}></Link></h3>
-                    </li>
-                  </div>
-                )
-              }
-            })}
-          </ol>
-          <h2>Archive</h2>
-          <ol>
-            {data.allWordpressPost.edges.map((edge, i) => {
-              if (i < 12) {
-                return (
-                  <div className={blogStyles.blogNavList_container}>
-                    <li className={blogStyles.blogNav_list}>
-                      <h3><Link to={`/blog/${edge.node.slug}`} className={blogStyles.blogNav_link} dangerouslySetInnerHTML={{ __html: edge.node.date }}></Link></h3>
-                    </li>
-                  </div>
-                )
-              }
-            })}
-          </ol>
-          <h2>Categories</h2>
-          <ol>
-            {data.allWordpressCategory.edges.map((edge, i) => {
-              if (i < 5) {
-                return (
-                  <div className={blogStyles.blogNavList_container}>
-                    <li className={blogStyles.blogNav_list}>
-                      <h3><Link to={`/blog/${edge.node.slug}`} className={blogStyles.blogNav_link} dangerouslySetInnerHTML={{ __html: edge.node.name }}></Link></h3>
-                    </li>
-                  </div>
-                )
-              }
-            })}
-          </ol>
-        </div>
+        <BlogNav />
       </div>
     </Layout >
   )

@@ -34,6 +34,7 @@ const IndexPage = () => {
                 <Carousel
                     autoplay={true}
                     autoplayInterval={3000}
+                    pauseOnHover={false}
                     wrapAround={true}
                     renderCenterLeftControls={({ previousSlide }) => (
                         <button onClick={previousSlide} className={indexStyles.indexCarousel_button}><i className="fas fa-arrow-left"></i></button>
