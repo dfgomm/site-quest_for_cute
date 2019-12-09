@@ -65,7 +65,7 @@ const BlogNav = () => {
                   return (
                     <div className={blogStyles.blogNavList_container}>
                       <li className={blogStyles.blogNav_list}>
-                        <h3><Link to={`/blog/${edge.node.slug}`} className={blogStyles.blogNav_link} dangerouslySetInnerHTML={{ __html: edge.node.name }}></Link></h3>
+                        <h3><Link to={`/blog/category/${edge.node.slug}`} className={blogStyles.blogNav_link} dangerouslySetInnerHTML={{ __html: edge.node.name }}></Link></h3>
                       </li>
                     </div>
                   )

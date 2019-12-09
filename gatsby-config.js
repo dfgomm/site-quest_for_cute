@@ -11,7 +11,6 @@ module.exports = {
       options: {
         google: {
           families: ['Open Sans', 'sans-serif', 'Pacifico', 'cursive']
-          //, families: ['Pacifico', 'cursive']
         }
       }
     },
