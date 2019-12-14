@@ -41,7 +41,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
       component: blogArchiveFilter,
       path: `/blog/${edge.node.date}`,
       context: {
-        slug: edge.node.date,
+        slug: `${edge.node.date}-31`,
       }
     })
   })

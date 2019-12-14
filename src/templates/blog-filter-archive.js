@@ -12,7 +12,7 @@ import blogStyles from '../components/modules/blog.module.css'
 
 export const query = graphql`
   query($slug: Date!) {
-    allWordpressPost (filter: { date: { gt: $slug, lt: "2019-13" }}) {
+    allWordpressPost (filter: { date: { lte: $slug }}) {
       edges {
         node {
           title
@@ -24,11 +24,6 @@ export const query = graphql`
     }
   }
 `
-
-
-
-
-
 
 export default ({ data }) => {
   return (
