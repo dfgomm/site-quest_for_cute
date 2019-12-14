@@ -59,51 +59,50 @@ const BlogNav = () => {
       <h2>Archive</h2>
       <ol>
         {data.allWordpressPost.edges.map((edge, i) => {
-          console.log(dates[i])
-          let date = edge.node.date
+          if (i < dates.length) {
+            //Slices the year off of the date connecting slug and information in navbar
+            let yearInt = dates[i].slice(0, 4)
 
-          //Slices the year off of the date connecting slug and information in navbar
-          let yearInt = dates[0].slice(0, 4)
+            //Slices the month off of the date coneccting slug and information in navbar
+            let monthIntWithZero = dates[i].slice(5, 8)
 
-          //Slices the month off of the date coneccting slug and information in navbar
-          let monthIntWithZero = dates[0].slice(5, 8)
+            //Removes zero from months lower than 10 (10 is october and we want the zero present for that month to be able to locate it in the months array)
+            if (monthIntWithZero < 10) {
+              var monthInt = monthIntWithZero.replace("0", "")
+            } else {
+              var monthInt = monthIntWithZero
+            }
 
-          //Removes zero from months lower than 10 (10 is october and we want the zero present for that month to be able to locate it in the months array)
-          if (monthIntWithZero < 10) {
-            var monthInt = monthIntWithZero.replace("0", "")
-          } else {
-            var monthInt = monthIntWithZero
-          }
+            let months = [
+              'January',
+              'February',
+              'March',
+              'April',
+              'May',
+              'June',
+              'July',
+              'August',
+              'September',
+              'October',
+              'November',
+              'December'
+            ]
 
-          let months = [
-            'January',
-            'February',
-            'March',
-            'April',
-            'May',
-            'June',
-            'July',
-            'August',
-            'September',
-            'October',
-            'November',
-            'December'
-          ]
+            //Fetches month from number
+            let arrayOffset = 1
+            let monthFormatted = months[monthInt - arrayOffset]
 
-          //Fetches month from number
-          let arrayOffset = 1
-          let monthFormatted = months[monthInt - arrayOffset]
+            let archivedDate = monthFormatted + ' ' + yearInt
 
-          let archivedDate = monthFormatted + ' ' + yearInt
-
-          if (i < 12) {
-            return (
-              <div className={blogStyles.blogNavList_container}>
-                <li className={blogStyles.blogNav_list}>
-                  <h3><Link to={`/blog/${dates[i]}`} className={blogStyles.blogNav_link} dangerouslySetInnerHTML={{ __html: archivedDate }}></Link></h3>
-                </li>
-              </div>
-            )
+            if (i < 12) {
+              return (
+                <div className={blogStyles.blogNavList_container}>
+                  <li className={blogStyles.blogNav_list}>
+                    <h3><Link to={`/blog/${dates[i]}`} className={blogStyles.blogNav_link} dangerouslySetInnerHTML={{ __html: archivedDate }}></Link></h3>
+                  </li>
+                </div>
+              )
+            }
           }
         })}
       </ol>
