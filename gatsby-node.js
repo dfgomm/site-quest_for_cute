@@ -4,9 +4,6 @@ const path = require('path')
 
 module.exports.createPages = async ({ graphql, actions }) => {
 
- // import { paginate } from 'gatsby-awesome-pagination';
-
-
   const { createPage } = actions
   const blogPostTemplate = path.resolve('./src/templates/blog-post.js')
   const blogCategoryFilter = path.resolve('./src/templates/blog-filter-category.js')
@@ -73,7 +70,6 @@ module.exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  // UNPAGINATED
   //Blog list - organized by category
   res.data.allWordpressCategory.edges.forEach((edge) => {
     createPage({

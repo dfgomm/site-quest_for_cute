@@ -21,13 +21,7 @@ export const query = graphql`
   }
 `
 
-
-
-
-
-
 export default ({ data }) => {
-  //const post = data.allWordpressPost.edges[0].node
   return (
     <Layout>
       <div className={blogStyles.blog_container}>
