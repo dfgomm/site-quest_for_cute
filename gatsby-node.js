@@ -9,7 +9,6 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const blogCategoryFilter = path.resolve('./src/templates/blog-filter-category.js')
   const blogArchiveFilter = path.resolve('./src/templates/blog-filter-archive.js')
 
-  //Mine A
   const blogList = await graphql(`
 query {
   allWordpressPost {
@@ -23,10 +22,6 @@ query {
 }
 `);
 
-  //Mine B
-  const posts = blogList.data.allWordpressPost.edges;
-
-  //Mine C
   const categories = await graphql(`
 query {
   allWordpressCategory {
@@ -38,6 +33,9 @@ query {
   }
 }
 `);
+
+  const posts = blogList.data.allWordpressPost.edges;
+
 
   blogList.data.allWordpressPost.edges.forEach((edge) => {
     createPage({
@@ -82,7 +80,7 @@ query {
     }
   })
 
-  /*
+  /* OLD AND UNPAGINATED -- IGNORE
   //Blog list - organized by category
   categories.data.allWordpressCategory.edges.forEach((edge) => {
     createPage({

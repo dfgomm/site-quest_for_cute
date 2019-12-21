@@ -50,15 +50,36 @@ export default ({ data }) => {
               )
             })}
           </ol>
-          <p><Link to={`/blog/category/${data.allWordpressCategory.edges[0].node.slug}/2`}>Older Posts</Link></p>
-          <p><Link to={`/blog/category/${data.allWordpressCategory.edges[0].node.slug}/4`}>Newer Posts</Link></p>
         </div>
         <BlogNav />
       </div>
     </Layout>
   )
 }
-/*
-<p><Link to={`/blog/category/${data.allWordpressCategory.edges.node.slug}`}>TEST</Link></p>
-<p><Link to={`/blog/category/${data.allWordpressCategory.edges.node.slug}`}>TEST</Link></p>
+
+
+/* STRUCTURE FOR NAVIGATION LINKS? NOT SURE HOW TO INCORPORATE.
+class BlogList extends React.component {
+  render() {
+    const { currentPage, paginatedPagesCount } = this.props.pageContext
+    const isFirst = currentPage === 1
+    const isLast = currentPage === paginatedPagesCount
+    const prevPage = currentPage - 1 === 1 ? "/" : (currentPage - 1).toString()
+    const nextPage = (currentPage + 1).toString()
+
+    return (
+       // code to display a list of posts 
+       {!isFirst && (
+        <Link to={prevPage} rel="prev">
+          ← Previous Page
+        </Link>
+      )}
+      {!isLast && (
+        <Link to={nextPage} rel="next">
+          Next Page →
+        </Link>
+      )}
+    )
+  }
+}
 */
