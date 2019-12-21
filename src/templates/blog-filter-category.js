@@ -7,8 +7,8 @@ import BlogNav from '../components/blognav'
 import blogStyles from '../components/modules/blog.module.css'
 
 export const query = graphql`
-  query($slug: String!) {
-    allWordpressPost (filter: {categories: {elemMatch: {slug: { eq: $slug }}}}) {
+  query($slug: String!, $limit: Int!, $skip: Int!) {
+    allWordpressPost (filter: {categories: {elemMatch: {slug: { eq: $slug }}}} limit: $limit skip: $skip) {
       edges {
         node {
           title
@@ -18,10 +18,20 @@ export const query = graphql`
         }
       }
     }
+    allWordpressCategory (filter: {slug: {eq: $slug}}) {
+      edges {
+        node {
+          slug
+        }
+      }
+    }
   }
 `
 
+
 export default ({ data }) => {
+
+
   return (
     <Layout>
       <div className={blogStyles.blog_container}>
@@ -35,14 +45,20 @@ export default ({ data }) => {
                     <p className={blogStyles.blog_date}>{edge.node.date}</p>
                     <p className={blogStyles.blog_content} dangerouslySetInnerHTML={{ __html: edge.node.content }} />
                   </li>
+
                 </div>
               )
             })}
           </ol>
+          <p><Link to={`/blog/category/${data.allWordpressCategory.edges[0].node.slug}/2`}>Older Posts</Link></p>
+          <p><Link to={`/blog/category/${data.allWordpressCategory.edges[0].node.slug}/4`}>Newer Posts</Link></p>
         </div>
         <BlogNav />
       </div>
-
     </Layout>
   )
 }
+/*
+<p><Link to={`/blog/category/${data.allWordpressCategory.edges.node.slug}`}>TEST</Link></p>
+<p><Link to={`/blog/category/${data.allWordpressCategory.edges.node.slug}`}>TEST</Link></p>
+*/

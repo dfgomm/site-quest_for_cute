@@ -9,46 +9,37 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const blogCategoryFilter = path.resolve('./src/templates/blog-filter-category.js')
   const blogArchiveFilter = path.resolve('./src/templates/blog-filter-archive.js')
 
-  const res = await graphql(`
-      query {
-        allWordpressPost {
-          edges {
-            node {
-              slug
-              date(formatString:"YYYY-MM")
-            }
-          }
-        }
-        allWordpressCategory {
-          edges {
-            node {
-              slug
-            }
-          }
-        }
+  //Mine A
+  const blogList = await graphql(`
+query {
+  allWordpressPost {
+    edges {
+      node {
+        slug
+        date(formatString:"YYYY-MM")
       }
-    `)
-
-
- /*
-  const blogPostsCount = res.data.allWordpressPost.edges.length
-  const blogPostsPerPaginatedPage = 3
-  const paginatedPagesCount = Math.ceil(blogPostsCount / blogPostsPerPaginatedPage)
-
-  const paginationPath = (path, page, totalPages) => {
-  if (page === 0) {
-    return path
-  } else if (page < 0 || page >= totalPages) {
-    return ''
-  } else {
-    return `${path}/${page + 1}`
+    }
   }
 }
-*/
+`);
 
+  //Mine B
+  const posts = blogList.data.allWordpressPost.edges;
 
-  
-  res.data.allWordpressPost.edges.forEach((edge) => {
+  //Mine C
+  const categories = await graphql(`
+query {
+  allWordpressCategory {
+    edges {
+      node {
+        slug
+      }
+    }
+  }
+}
+`);
+
+  blogList.data.allWordpressPost.edges.forEach((edge) => {
     createPage({
       component: blogPostTemplate,
       path: `/blog/${edge.node.slug}`,
@@ -60,7 +51,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
 
   //Blog list - organized by month/year
-  res.data.allWordpressPost.edges.forEach((edge) => {
+  blogList.data.allWordpressPost.edges.forEach((edge) => {
     createPage({
       component: blogArchiveFilter,
       path: `/blog/${edge.node.date}`,
@@ -70,8 +61,30 @@ module.exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
+
+  categories.data.allWordpressCategory.edges.forEach((edge) => {
+    const slug = edge.node.slug
+    const blogPostsCount = posts.length
+    const blogPostsPerPaginatedPage = 3
+    const paginatedPagesCount = Math.ceil(blogPostsCount / blogPostsPerPaginatedPage)
+    for (let i = 0; i <= paginatedPagesCount; i++) {
+      createPage({
+        component: blogCategoryFilter,
+        path: i === 0 ? `/blog/category/${slug}` : `/blog/category/${slug}/${i + 1}`,
+        context: {
+          slug: slug,
+          limit: blogPostsPerPaginatedPage,
+          skip: i * blogPostsPerPaginatedPage,
+          paginatedPagesCount,
+          currentPage: i + 1,
+        }
+      })
+    }
+  })
+
+  /*
   //Blog list - organized by category
-  res.data.allWordpressCategory.edges.forEach((edge) => {
+  categories.data.allWordpressCategory.edges.forEach((edge) => {
     createPage({
       component: blogCategoryFilter,
       path: `/blog/category/${edge.node.slug}`,
@@ -80,5 +93,5 @@ module.exports.createPages = async ({ graphql, actions }) => {
       }
     })
   })
-  
+  */
 }
