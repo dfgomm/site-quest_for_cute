@@ -29,11 +29,37 @@ export const query = graphql`
 `
 
 
-export default ({ data }) => {
+export default ({ data, pageContext }) => {
+  const currentPage = pageContext.currentPage
 
+  /*
+  let blogPostsCount = posts.length
+  let blogPostsPerPaginatedPage = 3
+  let paginatedPagesCount = Math.ceil(blogPostsCount / blogPostsPerPaginatedPage)
+*/
+  
+  //needs to change based on filter
+  const paginatedPagesCount = pageContext.paginatedPagesCount
+
+
+
+  const isFirst = currentPage === 1
+  const isLast = currentPage === paginatedPagesCount
+  const prevPage = currentPage - 1 === 1 ? "/" : (currentPage - 1).toString()
+  const nextPage = (currentPage + 1).toString()
 
   return (
-    <Layout>
+    <Layout {...pageContext}>
+      {!isFirst && (
+            <Link to={`blog/category/${pageContext.slug}/${prevPage}`} rel="prev">
+              ← Previous Page
+            </Link>
+          )}
+          {!isLast && (
+              <Link to={`blog/category/${pageContext.slug}/${nextPage}`} rel="next">
+                Next Page →
+              </Link>
+           )}
       <div className={blogStyles.blog_container}>
         <div className={blogStyles.blogContent_container}>
           <ol>
@@ -50,7 +76,18 @@ export default ({ data }) => {
               )
             })}
           </ol>
+          {!isFirst && (
+            <Link to={`blog/category/${pageContext.slug}/${prevPage}`} rel="prev">
+              ← Previous Page
+            </Link>
+          )}
+          {!isLast && (
+              <Link to={`blog/category/${pageContext.slug}/${nextPage}`} rel="next">
+                Next Page →
+              </Link>
+           )}
         </div>
+
         <BlogNav />
       </div>
     </Layout>
@@ -68,7 +105,7 @@ class BlogList extends React.component {
     const nextPage = (currentPage + 1).toString()
 
     return (
-       // code to display a list of posts 
+       // code to display a list of posts
        {!isFirst && (
         <Link to={prevPage} rel="prev">
           ← Previous Page
