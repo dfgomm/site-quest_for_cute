@@ -73,6 +73,7 @@ query {
           slug: slug,
           limit: blogPostsPerPaginatedPage,
           skip: i * blogPostsPerPaginatedPage,
+          blogPostsPerPaginatedPage,
           paginatedPagesCount,
           currentPage: i + 1,
         }
