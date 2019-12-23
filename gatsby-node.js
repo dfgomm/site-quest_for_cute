@@ -47,16 +47,26 @@ query {
     })
   })
 
-
   //Blog list - organized by month/year
   blogList.data.allWordpressPost.edges.forEach((edge) => {
-    createPage({
-      component: blogArchiveFilter,
-      path: `/blog/${edge.node.date}`,
-      context: {
-        slug: `${edge.node.date}-31`,
-      }
-    })
+    const date = edge.node.date
+    let blogPostsCount = posts.length
+    let blogPostsPerPaginatedPage = 5
+    let paginatedPagesCount = Math.ceil(blogPostsCount / blogPostsPerPaginatedPage)
+    for (let i = 0; i <= paginatedPagesCount; i++) {
+      createPage({
+        component: blogArchiveFilter,
+        path: i === 0 ? `/blog/${date}` : `/blog/${date}/${i + 1}`,
+        context: {
+          date,
+          slug: `${date}-31`,
+          limit: blogPostsPerPaginatedPage,
+          skip: i * blogPostsPerPaginatedPage,
+          blogPostsPerPaginatedPage,
+          paginatedPagesCount,
+          currentPage: i + 1,        }
+      })
+    }
   })
 
 
@@ -80,6 +90,22 @@ query {
       })
     }
   })
+
+
+  //Blog list - organized by month/year
+
+  /*
+    //Blog list - organized by month?year OLD AND UNPAGINATED
+    blogList.data.allWordpressPost.edges.forEach((edge) => {
+      createPage({
+        component: blogArchiveFilter,
+        path: `/blog/${edge.node.date}`,
+        context: {
+          slug: `${edge.node.date}-31`,
+        }
+      })
+    })
+  */
 
   /* OLD AND UNPAGINATED -- IGNORE
   //Blog list - organized by category

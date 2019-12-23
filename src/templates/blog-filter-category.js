@@ -24,11 +24,7 @@ export const query = graphql`
 
 
 export default ({ data, pageContext }) => {
-  
-
-  let filteredPostCount = data.allWordpressPost.totalCount
-
-  //needs to change based on filter
+  let filteredPostCount = data.allWordpressPost.totalCount //counts all filtered-by-category posts without limit or skip
   let blogPostsPerPaginatedPage = pageContext.blogPostsPerPaginatedPage
   let paginatedPagesCount = Math.ceil(filteredPostCount / blogPostsPerPaginatedPage)
   
@@ -38,8 +34,6 @@ export default ({ data, pageContext }) => {
   let isLast = currentPage === paginatedPagesCount
   let prevPage = currentPage - 1 === 1 ? "/" : (currentPage - 1).toString()
   let nextPage = (currentPage + 1).toString()
-
-  console.log(paginatedPagesCount)
 
   return (
     <Layout {...pageContext}>
