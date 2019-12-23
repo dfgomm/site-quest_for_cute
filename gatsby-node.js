@@ -63,7 +63,7 @@ query {
   categories.data.allWordpressCategory.edges.forEach((edge) => {
     const slug = edge.node.slug
     let blogPostsCount = posts.length
-    let blogPostsPerPaginatedPage = 3
+    let blogPostsPerPaginatedPage = 5
     let paginatedPagesCount = Math.ceil(blogPostsCount / blogPostsPerPaginatedPage)
     for (let i = 0; i <= paginatedPagesCount; i++) {
       createPage({
