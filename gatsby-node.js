@@ -6,6 +6,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
   const { createPage } = actions
   const blogPostTemplate = path.resolve('./src/templates/blog-post.js')
+  const blogListTemplate = path.resolve('./src/templates/blog.js')
   const blogCategoryFilter = path.resolve('./src/templates/blog-filter-category.js')
   const blogArchiveFilter = path.resolve('./src/templates/blog-filter-archive.js')
 
@@ -47,6 +48,26 @@ query {
     })
   })
 
+  blogList.data.allWordpressPost.edges.forEach((edge) => {
+    let blogPostsCount = posts.length
+    let blogPostsPerPaginatedPage = 5
+    let paginatedPagesCount = Math.ceil(blogPostsCount / blogPostsPerPaginatedPage)
+    for (let i = 0; i <= paginatedPagesCount; i++) {
+      createPage({
+        component: blogListTemplate,
+        path: i === 0 ? `/blog/` : `/blog/${i + 1}`,
+        context: {
+          limit: blogPostsPerPaginatedPage,
+          skip: i * blogPostsPerPaginatedPage,
+          blogPostsPerPaginatedPage,
+          paginatedPagesCount,
+          currentPage: i + 1,        
+        }
+      })
+    }
+  })
+
+  
   //Blog list - organized by month/year
   blogList.data.allWordpressPost.edges.forEach((edge) => {
     const date = edge.node.date
@@ -64,7 +85,8 @@ query {
           skip: i * blogPostsPerPaginatedPage,
           blogPostsPerPaginatedPage,
           paginatedPagesCount,
-          currentPage: i + 1,        }
+          currentPage: i + 1,        
+        }
       })
     }
   })
@@ -92,9 +114,22 @@ query {
   })
 
 
+  
+/*
+  blogList.data.allWordpressPost.edges.forEach((edge) => {
+    createPage({
+      component: blogPostTemplate,
+      path: `/blog/${edge.node.slug}`,
+      context: {
+        slug: edge.node.slug,
+      }
+    })
+  })
+  
+
   //Blog list - organized by month/year
 
-  /*
+  
     //Blog list - organized by month?year OLD AND UNPAGINATED
     blogList.data.allWordpressPost.edges.forEach((edge) => {
       createPage({
@@ -105,9 +140,9 @@ query {
         }
       })
     })
-  */
+  
 
-  /* OLD AND UNPAGINATED -- IGNORE
+  
   //Blog list - organized by category
   categories.data.allWordpressCategory.edges.forEach((edge) => {
     createPage({
