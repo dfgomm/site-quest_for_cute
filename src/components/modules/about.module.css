@@ -11,7 +11,12 @@
 }
 
 .about_container h1 {
+  font-size: 1.7rem;
   font-weight: 1000;
+}
+
+.about_container p {
+  font-size: 14px;
 }
 
 .about_container img {

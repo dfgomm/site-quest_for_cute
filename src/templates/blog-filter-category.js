@@ -37,16 +37,22 @@ export default ({ data, pageContext }) => {
 
   return (
     <Layout {...pageContext}>
+      <div className={blogStyles.paginationLink_container}>
       {!isFirst && (
-        <Link to={`blog/category/${pageContext.slug}/${prevPage}`} rel="prev">
-          ← Previous Page
-            </Link>
+        <p>
+          <Link className={blogStyles.paginationLink_previous} to={`blog/category/${pageContext.slug}/${prevPage}`} rel="prev">
+            ← Previous Page
+          </Link>
+        </p>
       )}
       {!isLast && (
-        <Link to={`blog/category/${pageContext.slug}/${nextPage}`} rel="next">
-          Next Page →
-              </Link>
+        <p>
+          <Link className={blogStyles.paginationLink_next} to={`blog/category/${pageContext.slug}/${nextPage}`} rel="next">
+            Next Page →
+          </Link>
+        </p>
       )}
+      </div>
       <div className={blogStyles.blog_container}>
         <div className={blogStyles.blogContent_container}>
           <ol>
@@ -63,19 +69,26 @@ export default ({ data, pageContext }) => {
               )
             })}
           </ol>
-          {!isFirst && (
-            <Link to={`blog/category/${pageContext.slug}/${prevPage}`} rel="prev">
-              ← Previous Page
-            </Link>
-          )}
-          {!isLast && (
-            <Link to={`blog/category/${pageContext.slug}/${nextPage}`} rel="next">
-              Next Page →
-              </Link>
-          )}
+          
         </div>
 
         <BlogNav />
+      </div>
+      <div className={blogStyles.paginationLink_container}>
+      {!isFirst && (
+        <p>
+          <Link className={blogStyles.paginationLink_previous} to={`blog/category/${pageContext.slug}/${prevPage}`} rel="prev">
+            ← Previous Page
+          </Link>
+        </p>
+      )}
+      {!isLast && (
+        <p>
+          <Link className={blogStyles.paginationLink_next} to={`blog/category/${pageContext.slug}/${nextPage}`} rel="next">
+            Next Page →
+          </Link>
+        </p>
+      )}
       </div>
     </Layout>
   )

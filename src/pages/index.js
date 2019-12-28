@@ -80,15 +80,19 @@ const IndexPage = () => {
                     })}
                 </div>
             </div>
-
-            <h1 className={indexStyles.indexHeader}>Featured Items</h1>
-            <div className={indexStyles.indexItem_container}>
-                <div className={indexStyles.index_item}></div>
-                <div className={indexStyles.index_item}></div>
-                <div className={indexStyles.index_item}></div>
-            </div>
+            
+            
         </Layout >
     )
 }
 
 export default IndexPage
+
+/* INCLUDE ABOVE CLOSING LAYOUT TAG ONCE DEIDRE PROVIDES ETSY API KEY
+<h1 className={indexStyles.indexHeader}>Featured Items</h1>
+            <div className={indexStyles.indexItem_container}>
+                <div className={indexStyles.index_item}></div>
+                <div className={indexStyles.index_item}></div>
+                <div className={indexStyles.index_item}></div>
+            </div>
+            */
