@@ -38,20 +38,20 @@ export default ({ data, pageContext }) => {
   return (
     <Layout {...pageContext}>
       <div className={blogStyles.paginationLink_container}>
-      {!isFirst && (
-        <p>
-          <Link className={blogStyles.paginationLink_previous} to={`blog/${prevPage}`} rel="prev">
-            ← Previous Page
+        {!isFirst && (
+          <p>
+            <Link className={blogStyles.paginationLink_previous} to={`blog/${prevPage}`} rel="prev">
+              ← Previous Page
           </Link>
-        </p>
-      )}
-      {!isLast && (
-        <p>
-          <Link className={blogStyles.paginationLink_next} to={`blog/${nextPage}`} rel="next">
-            Next Page →
+          </p>
+        )}
+        {!isLast && (
+          <p>
+            <Link className={blogStyles.paginationLink_next} to={`blog/${nextPage}`} rel="next">
+              Next Page →
           </Link>
-        </p>
-      )}
+          </p>
+        )}
       </div>
       <div className={blogStyles.blog_container}>
         <div className={blogStyles.blogContent_container}>
@@ -74,20 +74,20 @@ export default ({ data, pageContext }) => {
         <BlogNav />
       </div>
       <div className={blogStyles.paginationLink_container}>
-      {!isFirst && (
-        <p>
-          <Link className={blogStyles.paginationLink_previous} to={`blog/${prevPage}`} rel="prev">
-            ← Previous Page
+        {!isFirst && (
+          <p>
+            <Link className={blogStyles.paginationLink_previous} to={`blog/${prevPage}`} rel="prev">
+              ← Previous Page
           </Link>
-        </p>
-      )}
-      {!isLast && (
-        <p>
-          <Link className={blogStyles.paginationLink_next} to={`blog/${nextPage}`} rel="next">
-            Next Page →
+          </p>
+        )}
+        {!isLast && (
+          <p>
+            <Link className={blogStyles.paginationLink_next} to={`blog/${nextPage}`} rel="next">
+              Next Page →
           </Link>
-        </p>
-      )}
+          </p>
+        )}
       </div>
     </Layout>
   )

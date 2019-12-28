@@ -10,6 +10,12 @@
   margin: 0 auto;
 }
 
+@media (max-width: 980px) {
+  .about_container {
+    width: 80%;
+  }
+}
+
 .about_container h1 {
   font-size: 1.7rem;
   font-weight: 1000;
@@ -26,5 +32,12 @@
   margin: 2rem;
   -webkit-box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (max-width: 980px) {
+  .about_container img {
+    max-width: 90%;
+    min-width: 50%;
+  }
 }
 /*# sourceMappingURL=about.module.css.map */

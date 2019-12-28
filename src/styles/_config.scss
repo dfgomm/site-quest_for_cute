@@ -10,3 +10,18 @@ $header-font-size: 1.2rem;
     font-weight: 300;
 }
 
+@mixin media-query($size) {
+    @if $size == sm {
+        @media (max-width: 500px) { @content; }
+    } @else if $size == md {
+      @media (max-width: 980px) { @content; }
+    } @else if $size == lg {
+      @media (max-width: 1024px) { @content; }
+    } @else if $size == xl {
+      @media (max-width: 1224px) { @content; }
+    } @else if $size == xxl {
+      @media (max-width: 1824px) { @content; }
+    }
+}
+
+//@include media-query(sm)

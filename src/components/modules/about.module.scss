@@ -4,9 +4,12 @@
   padding: 2rem;
   width: 70%;
   margin: 0 auto;
+  @include media-query(md) {
+    width: 80%;
+  }
 
   h1 {
-    font-size: $header-font-size + .5rem;
+    font-size: $header-font-size + 0.5rem;
     font-weight: 1000;
   }
 
@@ -15,10 +18,16 @@
   }
 
   img {
-      border: solid 5px white;
-      border-radius: 5%;
+    border: solid 5px white;
+    border-radius: 5%;
     float: right;
     margin: 2rem;
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    @include media-query(md){
+      max-width: 90%;
+      min-width: 50%;
+    }
+
   }
 }

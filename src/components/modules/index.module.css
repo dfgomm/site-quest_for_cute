@@ -16,6 +16,12 @@
   margin: 0 auto;
 }
 
+@media (max-width: 980px) {
+  .indexCarousel_container {
+    height: auto;
+  }
+}
+
 .indexCarousel_button {
   background-color: Transparent;
   background-repeat: no-repeat;
@@ -45,10 +51,22 @@
   border-radius: 50%;
 }
 
+@media (max-width: 980px) {
+  .indexCarousel_slideContainer div {
+    top: 20%;
+  }
+}
+
 .indexCarousel_slideContainer div h2 {
   font-size: 3rem;
   text-align: right;
   font-family: "Pacifico", cursive;
+}
+
+@media (max-width: 980px) {
+  .indexCarousel_slideContainer div h2 {
+    font-size: 2rem;
+  }
 }
 
 .indexCarousel_slideContainer div p {
@@ -60,7 +78,7 @@
 
 .indexHeader {
   display: block;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-align: center;
 }
 

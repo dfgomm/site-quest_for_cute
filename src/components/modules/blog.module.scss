@@ -11,8 +11,16 @@
   width: 70%;
   justify-content: space-between;
 
+  @include media-query(md) {
+    width: 90%;
+  }
+
   .paginationLink_previous {
     padding-left: 7rem;
+
+    @include media-query(md) {
+      padding-left: 4.5rem;
+    }
   }
 
   .paginationLink_previous,
@@ -20,6 +28,7 @@
     color: black;
     font-size: $header-font-size;
   }
+
   .paginationLink_next {
     padding-left: 7rem;
   }
@@ -30,14 +39,27 @@
   flex-direction: row;
   width: 100%;
   flex-wrap: wrap;
+
+  @include media-query(md) {
+    flex-direction: column;
+  }
 }
 
 .blogContent_container {
   width: 70%;
+
+  @include media-query(md) {
+    width: 100%;
+  }
 }
 
 .blogNav_container {
   width: 20%;
+
+  @include media-query(md) {
+    width: 100%;
+    margin-left: 3rem;
+  }
 
   h2 {
     padding-top: 1rem;
@@ -58,6 +80,9 @@
 .blogPost_container,
 .blogNav_container {
   padding: 0rem 4rem;
+  @include media-query(md) {
+    padding: 0rem 1rem;
+  }
 }
 
 .blog_list {
@@ -89,14 +114,23 @@
     display: none;
   }
   img {
-    max-width: 50%;
-    min-width: 50%;
+    max-width: 60%;
+    min-width: 60%;
     height: auto;
     display: block;
     margin: 0 auto;
     border: solid 5px white;
     border-radius: 5%;
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    @include media-query(md) {
+      max-width: 60%;
+      min-width: 50%;    
+    }
+    @include media-query(sm) {
+      max-width: 80%;
+      min-width: 50%;    
+    }
   }
 
   figcaption {
