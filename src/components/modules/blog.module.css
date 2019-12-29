@@ -168,7 +168,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .blog_content img {
     max-width: 80%;
     min-width: 50%;

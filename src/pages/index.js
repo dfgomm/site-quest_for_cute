@@ -67,7 +67,7 @@ const IndexPage = () => {
             <div className={indexStyles.indexPost_container}>
                 <div className={indexStyles.indexPost_container}>
                     {data.allWordpressPost.edges.map((edge, i) => {
-                        if (i < 3) {
+                        if (i < 4) {
                             return (
                                 <div className={indexStyles.index_post}>
                                     <h2><Link to={`/blog/${edge.node.slug}`} className={indexStyles.post_title} dangerouslySetInnerHTML={{ __html: edge.node.title }}></Link></h2>
