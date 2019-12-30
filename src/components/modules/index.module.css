@@ -9,16 +9,12 @@
   width: 100%;
   height: 87vh;
   position: relative;
-  /* Media query this!
-    height: auto;
-
-    */
   margin: 0 auto;
 }
 
 @media (max-width: 980px) {
   .indexCarousel_container {
-    height: auto;
+    height: 100%;
   }
 }
 
@@ -33,7 +29,7 @@
 
 .indexCarousel_button i {
   color: black;
-  font-size: 3rem;
+  font-size: 1rem;
 }
 
 .indexCarousel_slideContainer img {
@@ -69,11 +65,29 @@
   }
 }
 
+@media (max-width: 600px) {
+  .indexCarousel_slideContainer div h2 {
+    font-size: 1rem;
+  }
+}
+
 .indexCarousel_slideContainer div p {
   color: white;
   font-family: "Pacifico", cursive;
   text-align: center;
   font-size: 2rem;
+}
+
+@media (max-width: 980px) {
+  .indexCarousel_slideContainer div p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .indexCarousel_slideContainer div p {
+    font-size: .5rem;
+  }
 }
 
 .indexHeader {
