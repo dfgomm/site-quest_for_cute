@@ -115,7 +115,7 @@ query {
 
 
   
-/*
+/* OLD AND UNPAGINATED-- Ignore
   blogList.data.allWordpressPost.edges.forEach((edge) => {
     createPage({
       component: blogPostTemplate,
