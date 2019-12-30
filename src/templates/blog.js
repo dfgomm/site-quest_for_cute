@@ -63,6 +63,7 @@ export default ({ data, pageContext }) => {
                     <h2><Link to={`/blog/${edge.node.slug}`} className={blogStyles.blog_title} dangerouslySetInnerHTML={{ __html: edge.node.title }}></Link></h2>
                     <p className={blogStyles.blog_date}>{edge.node.date}</p>
                     <p className={blogStyles.blog_content} dangerouslySetInnerHTML={{ __html: edge.node.content }} />
+                    <p><Link to={`/blog/${edge.node.slug}`}>Leave a comment</Link></p>
                   </li>
 
                 </div>

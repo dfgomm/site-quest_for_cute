@@ -43,7 +43,7 @@ const IndexPage = () => {
                         <button onClick={nextSlide} className={indexStyles.indexCarousel_button}><i className="fas fa-arrow-right"></i></button>
                     )}>
                     <div className={indexStyles.indexCarousel_slideContainer}>
-                        <Link to="/shop"><img src={header1} alt="Pencil case with cat, heart, and cupcake design."></img></Link>
+                        <a href="https://www.etsy.com/shop/QuestforCute" target="__blank"><img src={header1} alt="Pencil case with cat, heart, and cupcake design."></img></a>
                         <div>
                             <h2>Shop</h2>
                         </div>
