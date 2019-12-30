@@ -30,7 +30,6 @@
   @include media-query(sm) {
     display: none;
   }
-  
 }
 
 .headerNav_links li {
@@ -46,19 +45,18 @@
 
 /////////////////////////////////////////////////////////////////////////
 
-
-
 .menuToggle {
   display: none;
   position: relative;
   top: 50px;
   left: 50px;
+  width: 79.5%;
 
   z-index: 1;
 
   -webkit-user-select: none;
   user-select: none;
-  
+
   @include media-query(sm) {
     display: block;
   }
@@ -125,8 +123,13 @@
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-.hamburgerMenu li {
-  padding: 10px 0;
+.hamburgerMenu {
+  li {
+    padding: 10px 0;
+  }
+  a {
+    font-size: 2rem;
+  }
 }
 
 // Slide from left

@@ -27,4 +27,9 @@
   margin-right: 1rem;
   font-size: 2rem;
 }
+
+.footer_social a {
+  color: white;
+  text-decoration: none;
+}
 /*# sourceMappingURL=footer.module.css.map */

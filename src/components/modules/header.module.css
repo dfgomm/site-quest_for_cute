@@ -68,6 +68,7 @@
   position: relative;
   top: 50px;
   left: 50px;
+  width: 79.5%;
   z-index: 1;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -150,6 +151,10 @@
 
 .hamburgerMenu li {
   padding: 10px 0;
+}
+
+.hamburgerMenu a {
+  font-size: 2rem;
 }
 
 .menuToggle input:checked ~ ul {

@@ -1,27 +1,31 @@
 @import "../../styles/config";
 
 .footer {
-    background: #353535;
-    color: white;
+  background: #353535;
+  color: white;
 }
 
 .footer_container {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
-    padding-bottom: 2rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  padding-bottom: 2rem;
 }
 
 .footer_social {
-
 }
 
-.footer_social i {  //swap with icons
+.footer_social {
+  i {
     display: inline;
     margin-right: 1rem;
     font-size: 2rem;
+  }
+  a {
+      color: white;
+      text-decoration: none;
+  }
 }
 
 .footer_copyright {
-
 }

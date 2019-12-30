@@ -4,6 +4,7 @@
   border: 0px solid black;
 }
 
+
 .paginationLink_container {
   display: inline-flex;
   flex-direction: row;
@@ -21,6 +22,10 @@
     @include media-query(md) {
       padding-left: 4.5rem;
     }
+
+    @include media-query(sm) {
+      padding-left: 1rem;
+    }
   }
 
   .paginationLink_previous,
@@ -31,6 +36,14 @@
 
   .paginationLink_next {
     padding-left: 7rem;
+
+    @include media-query(md) {
+      padding-left: 4.5rem;
+    }
+
+    @include media-query(sm) {
+      padding-left: 1rem;
+    }
   }
 }
 
@@ -48,16 +61,24 @@
 .blogContent_container {
   width: 70%;
 
+  ol {
+    @include media-query(sm) {
+    padding-left: 0px;
+    }
+  }
+
   @include media-query(md) {
     width: 100%;
+    margin-left: 0rem;
   }
+  
 }
 
 .blogNav_container {
   width: 20%;
 
   @include media-query(md) {
-    width: 100%;
+    width: 80%;
     margin-left: 3rem;
   }
 
@@ -83,6 +104,10 @@
   @include media-query(md) {
     padding: 0rem 1rem;
   }
+
+  @include media-query(md) {
+    margin-left: 1rem;
+  }
 }
 
 .blog_list {
@@ -93,6 +118,7 @@
 .blogNavList_container {
   margin-left: -40px;
 }
+
 .blogNav_list {
   list-style: none;
 }
@@ -125,11 +151,11 @@
 
     @include media-query(md) {
       max-width: 60%;
-      min-width: 50%;    
+      min-width: 50%;
     }
     @include media-query(sm) {
       max-width: 80%;
-      min-width: 50%;    
+      min-width: 50%;
     }
   }
 
