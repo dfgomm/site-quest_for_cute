@@ -13,6 +13,7 @@ const Header = () => {
 
 
                 <div className={headerStyles.menuToggle}>
+                <Link to="/"><img src={logo} alt="Logo" className={headerStyles.headerNavMobile_logo} /></Link>
                     <input type="checkbox" />
                     <span></span>
                     <span></span>
@@ -25,8 +26,6 @@ const Header = () => {
                         <li><h1><Link to="/contact">Contact</Link></h1></li>
                     </ul>
                 </div>
-
-
 
                 <div className={headerStyles.headerNav_container}>
                     <Link to="/"><img src={logo} alt="Logo" className={headerStyles.headerNav_logo} /></Link>

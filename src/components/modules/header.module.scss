@@ -32,6 +32,13 @@
   }
 }
 
+.headerNavMobile_logo {
+  position: absolute;
+  top: -130%;
+  right: 0;
+  width: 50%;
+}
+
 .headerNav_links li {
   padding-right: 5rem;
   font-size: $header-font-size;
