@@ -53,10 +53,10 @@
 }
 
 .headerNavMobile_logo {
-  position: absolute;
-  top: -130%;
-  right: 0;
-  width: 50%;
+  float: right;
+  margin-right: 10%;
+  margin-top: -5%;
+  width: 30%;
 }
 
 .headerNav_links li {

@@ -115,13 +115,5 @@ module.exports = {
     },
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
-    {
-      resolve: 'gatsby-source-etsy',
-      options: {
-        apiKey: process.env.GATSBY_ETSY_API,
-        shopId: process.env.GATSBY_ETSY_SHOPID,
-        language: 'en', // optional
-      },
-    },
   ]
 }
