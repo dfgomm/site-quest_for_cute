@@ -72,7 +72,7 @@ query {
   blogList.data.allWordpressPost.edges.forEach((edge) => {
     const date = edge.node.date
     let blogPostsCount = posts.length
-    let blogPostsPerPaginatedPage = 5
+    let blogPostsPerPaginatedPage = blogPostsCount
     let paginatedPagesCount = Math.ceil(blogPostsCount / blogPostsPerPaginatedPage)
     for (let i = 0; i <= paginatedPagesCount; i++) {
       createPage({
