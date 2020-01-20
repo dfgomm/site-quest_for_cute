@@ -11,7 +11,7 @@ const ContactPage = () => {
                     <p>Want to say hi? Feel free!</p>
                 </div>
                 <div>
-                    <form method="post" netlify-honeypot="bot-field" data-netlify="true">
+                    <form method="post" netlify-honeypot="bot-field" action="/success" data-netlify="true">
                         <input type="hidden" name="bot-field" />
                         <label>Name</label>
                         <br></br>
