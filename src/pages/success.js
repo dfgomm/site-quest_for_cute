@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import contactStyles from '../components/modules/contact.module.css'
 
 
-const ContactPage = () => {
+const SuccessPage = () => {
     return (
         <Layout>
             <div className={contactStyles.contact_container}>
