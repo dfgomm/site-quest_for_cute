@@ -33,7 +33,7 @@ const IndexPage = () => {
             <div className={indexStyles.indexCarousel_container}>
                 <Carousel
                     autoplay={true}
-                    autoplayInterval={3000}
+                    autoplayInterval={5000}
                     pauseOnHover={false}
                     wrapAround={true}
                     renderCenterLeftControls={({ previousSlide }) => (
