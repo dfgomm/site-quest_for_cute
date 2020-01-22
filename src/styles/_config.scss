@@ -4,6 +4,8 @@ $secondary-color: #CD5334;
 $font-size: 12px;
 $header-font-size: 1.2rem;
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
 * {
     font-size: $font-size;
     font-family: 'Open Sans', sans-serif;
