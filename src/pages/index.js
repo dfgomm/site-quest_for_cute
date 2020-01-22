@@ -76,6 +76,8 @@ const IndexPage = () => {
                                     <p><Link to={`/blog/${edge.node.slug}`} className={indexStyles.post_link}>Read more</Link></p>
                                 </div>
                             )
+                        } else {
+                            return (console.log("test"))
                         }
                     })}
                 </div>
@@ -87,12 +89,3 @@ const IndexPage = () => {
 }
 
 export default IndexPage
-
-/* INCLUDE ABOVE CLOSING LAYOUT TAG ONCE DEIDRE PROVIDES ETSY API KEY
-<h1 className={indexStyles.indexHeader}>Featured Items</h1>
-            <div className={indexStyles.indexItem_container}>
-                <div className={indexStyles.index_item}></div>
-                <div className={indexStyles.index_item}></div>
-                <div className={indexStyles.index_item}></div>
-            </div>
-            */
