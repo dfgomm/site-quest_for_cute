@@ -76,8 +76,6 @@ const IndexPage = () => {
                                     <p><Link to={`/blog/${edge.node.slug}`} className={indexStyles.post_link}>Read more</Link></p>
                                 </div>
                             )
-                        } else {
-                            return (console.log("test"))
                         }
                     })}
                 </div>
