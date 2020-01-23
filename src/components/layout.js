@@ -11,6 +11,7 @@ const Layout = (props) => {
         <div className={layoutStyles.container}>
             <Helmet>
                 <title>Quest for Cute</title>
+                <script src="https://kit.fontawesome.com/457588a6e7.js" crossorigin="anonymous"></script>
             </Helmet>
             <div className={layoutStyles.content}>
                 <Header />
