@@ -6,14 +6,7 @@
 
 module.exports = {
   plugins: [
-    {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        google: {
-          families: ['Open Sans', 'sans-serif', 'Pacifico', 'cursive']
-        }
-      }
-    },
+    
     `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-source-wordpress",
