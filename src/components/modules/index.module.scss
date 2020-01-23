@@ -43,7 +43,8 @@
     border-radius: 50%;
 
     @include media-query(md) {
-      top: 20%;
+      top: 15%;
+      padding: 2rem 3.5rem;
     }
 
     h2 {
