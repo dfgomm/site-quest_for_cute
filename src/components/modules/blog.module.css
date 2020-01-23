@@ -134,6 +134,10 @@
   font-size: 14px;
 }
 
+.blogPost_container p {
+  font-size: 14px;
+}
+
 .blogPost_container,
 .blogNav_container {
   padding: 0rem 4rem;
