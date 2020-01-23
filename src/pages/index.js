@@ -31,37 +31,7 @@ const IndexPage = () => {
     return (
         <Layout>
             <div className={indexStyles.indexCarousel_container}>
-                <Carousel
-                    autoplay={true}
-                    autoplayInterval={5000}
-                    pauseOnHover={false}
-                    wrapAround={true}
-                    renderCenterLeftControls={({ previousSlide }) => (
-                        <button onClick={previousSlide} className={indexStyles.indexCarousel_button}><i className="fas fa-arrow-left"></i></button>
-                    )}
-                    renderCenterRightControls={({ nextSlide }) => (
-                        <button onClick={nextSlide} className={indexStyles.indexCarousel_button}><i className="fas fa-arrow-right"></i></button>
-                    )}>
-                    <div className={indexStyles.indexCarousel_slideContainer}>
-                        <a href="https://www.etsy.com/shop/QuestforCute" target="__blank"><img src={header1} alt="Pencil case with cat, heart, and cupcake design."></img></a>
-                        <div>
-                            <h2>Shop</h2>
-                        </div>
-                    </div>
-                    <div className={indexStyles.indexCarousel_slideContainer}>
-                        <Link to="/blog"><img src={header2} alt="Notepad next to a cup of coffee."></img></Link>
-                        <div>
-                            <h2>Blog</h2>
-                        </div>
-                    </div>
-                    <div className={indexStyles.indexCarousel_slideContainer}>
-                        <a href="https://etsy.us7.list-manage.com/subscribe?u=51a896ffcc9959f46b93e215a&id=d52a3c39d8" target="__blank"><img src={header3} alt="Colorful pencil cases."></img></a>
-                        <div>
-                            <h2>Cute Castle VIP</h2>
-                            <p>Save 20%!</p>
-                        </div>
-                    </div>
-                </Carousel>
+                
             </div>
             <h1 className={indexStyles.indexHeader}>Latest Posts</h1>
             <div className={indexStyles.indexPost_container}>
