@@ -126,11 +126,11 @@
   padding: 1rem;
 }
 
-.post_excerpt {
+.index_post p {
   margin: 2.0rem 0rem;
 }
 
-.post_excerpt a {
+.index_post p a {
   display: none;
 }
 
