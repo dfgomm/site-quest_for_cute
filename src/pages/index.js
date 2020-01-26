@@ -4,9 +4,9 @@ import Layout from '../components/layout'
 import indexStyles from '../components/modules/index.module.css'
 
 import Carousel from 'nuka-carousel'
-import header1 from '../img/header1.jpg'
-import header2 from '../img/header2.jpg'
-import header3 from '../img/header3.jpg'
+import header1 from '../img/header1.png'
+import header2 from '../img/header2.png'
+import header3 from '../img/header3.png'
 
 
 
@@ -72,7 +72,6 @@ const IndexPage = () => {
                                 <div className={indexStyles.index_post}>
                                     <h2><Link to={`/blog/${edge.node.slug}`} className={indexStyles.post_title} dangerouslySetInnerHTML={{ __html: edge.node.title }}></Link></h2>
                                     <p className={indexStyles.post_excerpt} dangerouslySetInnerHTML={{ __html: edge.node.excerpt }} />
-                                    <p className={indexStyles.post_date} dangerouslySetInnerHTML={{ __html: edge.node.date}} />
                                     <p><Link to={`/blog/${edge.node.slug}`} className={indexStyles.post_link}>Read more</Link></p>
                                 </div>
                             )
