@@ -72,6 +72,7 @@ const IndexPage = () => {
                                 <div className={indexStyles.index_post}>
                                     <h2><Link to={`/blog/${edge.node.slug}`} className={indexStyles.post_title} dangerouslySetInnerHTML={{ __html: edge.node.title }}></Link></h2>
                                     <p className={indexStyles.post_excerpt} dangerouslySetInnerHTML={{ __html: edge.node.excerpt }} />
+                                    <p className={indexStyles.post_date} dangerouslySetInnerHTML={{ __html: edge.node.date}} />
                                     <p><Link to={`/blog/${edge.node.slug}`} className={indexStyles.post_link}>Read more</Link></p>
                                 </div>
                             )
