@@ -132,7 +132,10 @@
 
 .post_excerpt a {
   display: none;
-  visibility: hidden;
+}
+
+.post_date {
+  display: none;
 }
 
 .post_title {

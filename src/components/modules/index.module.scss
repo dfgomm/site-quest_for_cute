@@ -104,11 +104,14 @@
 
 .post_excerpt {
   margin: 2.5rem 0rem;
+}
 
-  a {
-    display: none;
-    visibility: hidden;
-  }
+.post_excerpt a {
+  display: none;
+}
+
+.post_date {
+  display: none;
 }
 
 .post_title {
