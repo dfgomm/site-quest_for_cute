@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Pacifico&display=swap");
 * {
-  font-size: 14px;
+  font-size: 12px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 }
@@ -136,7 +136,7 @@
 }
 
 .blogPost_container p {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .blogPost_container,
