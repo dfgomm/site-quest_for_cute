@@ -57,20 +57,20 @@
 }
 
 .indexCarousel_slideContainer div h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: right;
   font-family: "Pacifico", cursive;
 }
 
 @media (max-width: 980px) {
   .indexCarousel_slideContainer div h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 600px) {
   .indexCarousel_slideContainer div h2 {
-    font-size: 1rem;
+    font-size: .5rem;
   }
 }
 

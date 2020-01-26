@@ -48,15 +48,15 @@
     }
 
     h2 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       text-align: right;
       font-family: "Pacifico", cursive;
 
       @include media-query(md) {
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
       @include media-query(sm) {
-        font-size: 1rem;
+        font-size: .5rem;
       }
     }
 
