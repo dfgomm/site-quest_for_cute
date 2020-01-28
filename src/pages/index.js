@@ -45,19 +45,19 @@ const IndexPage = () => {
                     <div className={indexStyles.indexCarousel_slideContainer}>
                         <a href="https://www.etsy.com/shop/QuestforCute" target="__blank"><img src={header1} alt="Pencil case with cat, heart, and cupcake design."></img></a>
                         <div>
-                            <h2>Shop</h2>
+                            <h2><a href="https://www.etsy.com/shop/QuestforCute" target="__blank">Shop</a></h2>
                         </div>
                     </div>
                     <div className={indexStyles.indexCarousel_slideContainer}>
                         <Link to="/blog"><img src={header2} alt="Notepad next to a cup of coffee."></img></Link>
                         <div>
-                            <h2>Blog</h2>
+                            <h2><Link to="/blog">Blog</Link></h2>
                         </div>
                     </div>
                     <div className={indexStyles.indexCarousel_slideContainer}>
                         <a href="https://etsy.us7.list-manage.com/subscribe?u=51a896ffcc9959f46b93e215a&id=d52a3c39d8" target="__blank"><img src={header3} alt="Colorful pencil cases."></img></a>
                         <div>
-                            <h2>Cute Castle VIP</h2>
+                            <h2><a href="https://etsy.us7.list-manage.com/subscribe?u=51a896ffcc9959f46b93e215a&id=d52a3c39d8" target="__blank">Cute Castle VIP</a></h2>
                             <p>Save 20%!</p>
                         </div>
                     </div>

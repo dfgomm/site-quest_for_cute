@@ -56,20 +56,22 @@
   }
 }
 
-.indexCarousel_slideContainer div h2 {
+.indexCarousel_slideContainer div h2 a {
   font-size: 2.5rem;
   text-align: right;
   font-family: "Pacifico", cursive;
+  text-decoration: none;
+  color: white;
 }
 
 @media (max-width: 980px) {
-  .indexCarousel_slideContainer div h2 {
+  .indexCarousel_slideContainer div h2 a {
     font-size: 1.5rem;
   }
 }
 
 @media (max-width: 600px) {
-  .indexCarousel_slideContainer div h2 {
+  .indexCarousel_slideContainer div h2 a {
     font-size: .5rem;
   }
 }
