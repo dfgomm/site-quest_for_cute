@@ -9,6 +9,13 @@ module.exports = {
     
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: "UA-134742778-1",
+      },
+    },
+    {
       resolve: "gatsby-source-wordpress",
       options: {
         /*
